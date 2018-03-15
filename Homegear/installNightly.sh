@@ -112,24 +112,24 @@ fi
 
 installModule homegear-homematicbidcos_current_${system}_${arch}.deb
 installModule homegear-homematicwired_current_${system}_${arch}.deb
-installModule homegear-insteon_current_${system}_${arch}.deb
-installModule homegear-max_current_${system}_${arch}.deb
+#installModule homegear-insteon_current_${system}_${arch}.deb
+#installModule homegear-max_current_${system}_${arch}.deb
 installModule homegear-philipshue_current_${system}_${arch}.deb
 installModule homegear-sonos_current_${system}_${arch}.deb
-installModule homegear-kodi_current_${system}_${arch}.deb
+#installModule homegear-kodi_current_${system}_${arch}.deb
 installModule homegear-ipcam_current_${system}_${arch}.deb
-installModule homegear-beckhoff_current_${system}_${arch}.deb
-installModule homegear-knx_current_${system}_${arch}.deb
-installModule homegear-enocean_current_${system}_${arch}.deb
-installModule homegear-intertechno_current_${system}_${arch}.deb
-installModule homegear-rs2w_current_${system}_${arch}.deb
-installModule homegear-rsl_current_${system}_${arch}.deb
+#installModule homegear-beckhoff_current_${system}_${arch}.deb
+#installModule homegear-knx_current_${system}_${arch}.deb
+#installModule homegear-enocean_current_${system}_${arch}.deb
+#installModule homegear-intertechno_current_${system}_${arch}.deb
+#installModule homegear-rs2w_current_${system}_${arch}.deb
+#installModule homegear-rsl_current_${system}_${arch}.deb
 installModule homegear-zwave_current_${system}_${arch}.deb
-installModule homegear-mbus_current_${system}_${arch}.deb
-installModule homegear-ccu2_current_${system}_${arch}.deb
-installModule homegear-easycam_current_${system}_${arch}.deb
-installModule homegear-easyled_current_${system}_${arch}.deb
-installModule homegear-easyled2_current_${system}_${arch}.deb
+#installModule homegear-mbus_current_${system}_${arch}.deb
+#installModule homegear-ccu2_current_${system}_${arch}.deb
+#installModule homegear-easycam_current_${system}_${arch}.deb
+#installModule homegear-easyled_current_${system}_${arch}.deb
+#installModule homegear-easyled2_current_${system}_${arch}.deb
 installModule homegear-influxdb_current_${system}_${arch}.deb
 
 rm -f /etc/homegear/dh1024.pem
