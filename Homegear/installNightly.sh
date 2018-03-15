@@ -38,24 +38,24 @@ wget https://homegear.eu/downloads/nightlies/homegear-easy-licensing_current_${s
 
 downloadModule homegear-homematicbidcos_current_${system}_${arch}.deb
 downloadModule homegear-homematicwired_current_${system}_${arch}.deb
-downloadModule homegear-insteon_current_${system}_${arch}.deb
-downloadModule homegear-max_current_${system}_${arch}.deb
+#downloadModule homegear-insteon_current_${system}_${arch}.deb
+#downloadModule homegear-max_current_${system}_${arch}.deb
 downloadModule homegear-philipshue_current_${system}_${arch}.deb
 downloadModule homegear-sonos_current_${system}_${arch}.deb
-downloadModule homegear-kodi_current_${system}_${arch}.deb
+#downloadModule homegear-kodi_current_${system}_${arch}.deb
 downloadModule homegear-ipcam_current_${system}_${arch}.deb
-downloadModule homegear-beckhoff_current_${system}_${arch}.deb
-downloadModule homegear-knx_current_${system}_${arch}.deb
-downloadModule homegear-enocean_current_${system}_${arch}.deb
-downloadModule homegear-intertechno_current_${system}_${arch}.deb
-downloadModule homegear-rs2w_current_${system}_${arch}.deb
-downloadModule homegear-rsl_current_${system}_${arch}.deb
+#downloadModule homegear-beckhoff_current_${system}_${arch}.deb
+#downloadModule homegear-knx_current_${system}_${arch}.deb
+#downloadModule homegear-enocean_current_${system}_${arch}.deb
+#downloadModule homegear-intertechno_current_${system}_${arch}.deb
+#downloadModule homegear-rs2w_current_${system}_${arch}.deb
+#downloadModule homegear-rsl_current_${system}_${arch}.deb
 downloadModule homegear-zwave_current_${system}_${arch}.deb
 downloadModule homegear-mbus_current_${system}_${arch}.deb
-downloadModule homegear-ccu2_current_${system}_${arch}.deb
-downloadModule homegear-easycam_current_${system}_${arch}.deb
-downloadModule homegear-easyled_current_${system}_${arch}.deb
-downloadModule homegear-easyled2_current_${system}_${arch}.deb
+#downloadModule homegear-ccu2_current_${system}_${arch}.deb
+#downloadModule homegear-easycam_current_${system}_${arch}.deb
+#downloadModule homegear-easyled_current_${system}_${arch}.deb
+#downloadModule homegear-easyled2_current_${system}_${arch}.deb
 downloadModule homegear-influxdb_current_${system}_${arch}.deb
 
 dpkg -i libhomegear-base_current_${system}_${arch}.deb
