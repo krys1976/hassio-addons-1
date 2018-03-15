@@ -35,5 +35,9 @@ if ! [ -f /etc/homegear/dh1024.pem ]; then
 fi
 
 /usr/bin/homegear -d -p /var/run/homegear/homegear.pid -u homegear -g homegear
+PID=$(cat /var/run/homegear/homegear.pid)
+
 /usr/bin/homegear-influxdb -p /var/run/homegear/homegear-influxdb.pid -u homegear -g homegear -d
-tail -f /var/log/homegear/homegear.log
+tail -f /var/log/homegear/homegear.log &
+
+wait ${PID}
