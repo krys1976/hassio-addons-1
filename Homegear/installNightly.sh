@@ -50,8 +50,8 @@ downloadModule homegear-ipcam_current_${system}_${arch}.deb
 #downloadModule homegear-intertechno_current_${system}_${arch}.deb
 #downloadModule homegear-rs2w_current_${system}_${arch}.deb
 #downloadModule homegear-rsl_current_${system}_${arch}.deb
-downloadModule homegear-zwave_current_${system}_${arch}.deb
-downloadModule homegear-mbus_current_${system}_${arch}.deb
+#downloadModule homegear-zwave_current_${system}_${arch}.deb
+#downloadModule homegear-mbus_current_${system}_${arch}.deb
 #downloadModule homegear-ccu2_current_${system}_${arch}.deb
 #downloadModule homegear-easycam_current_${system}_${arch}.deb
 #downloadModule homegear-easyled_current_${system}_${arch}.deb
@@ -124,7 +124,7 @@ installModule homegear-ipcam_current_${system}_${arch}.deb
 #installModule homegear-intertechno_current_${system}_${arch}.deb
 #installModule homegear-rs2w_current_${system}_${arch}.deb
 #installModule homegear-rsl_current_${system}_${arch}.deb
-installModule homegear-zwave_current_${system}_${arch}.deb
+#installModule homegear-zwave_current_${system}_${arch}.deb
 #installModule homegear-mbus_current_${system}_${arch}.deb
 #installModule homegear-ccu2_current_${system}_${arch}.deb
 #installModule homegear-easycam_current_${system}_${arch}.deb
