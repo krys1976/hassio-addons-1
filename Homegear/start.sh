@@ -34,6 +34,6 @@ if ! [ -f /etc/homegear/dh1024.pem ]; then
 	chmod 400 /etc/homegear/dh1024.pem
 fi
 
-/usr/bin/homegear -d -p /var/run/homegear/homegear.pid -u homegear -p homegear
+/usr/bin/homegear -d -p /var/run/homegear/homegear.pid -u homegear -g homegear
 /usr/bin/homegear-influxdb -p /var/run/homegear/homegear-influxdb.pid -u homegear -g homegear -d
 tail -f /var/log/homegear/homegear.log
