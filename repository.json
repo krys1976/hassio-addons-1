@@ -1,5 +1,5 @@
 {
-  "name": "Homegear as a Hassio add-on",
-  "url": "https://github.com/yeah/hassio-addons",
-  "maintainer": "Jan (@yeah on Github)"
+  "name": "Homegear 0.8x nightly as a Hassio add-on",
+  "url": "https://github.com/krys1976/hassio-addons-1",
+  "maintainer": "Christian Lahme (@krys1976 on Github)"
 }
