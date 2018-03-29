@@ -1,10 +1,10 @@
-FROM resin/rpi-raspbian:stretch
+FROM resin/rpi-debian:stretch
 MAINTAINER Sathya Laufer <sathya@homegear.email>
 
 RUN \
    apt-get update && apt-get -y install apt-transport-https apt-utils wget ca-certificates gnupg \
 && wget https://homegear.eu/packages/Release.key && apt-key add Release.key && rm Release.key \
-&& echo 'deb https://homegear.eu/packages/Raspbian/ stretch/' >> /etc/apt/sources.list.d/homegear.list
+&& echo 'deb https://homegear.eu/packages/Debian/ stretch/' >> /etc/apt/sources.list.d/homegear.list
 
 COPY *.sh /
 
