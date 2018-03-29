@@ -7,7 +7,7 @@ fi
 SCRIPTDIR="$( cd "$(dirname $0)" && pwd )"
 
 apt-get update
-system="debbian_stretch"
+system="debian_stretch"
 arch="amd64"
 
 function downloadModule {
