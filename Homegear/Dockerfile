@@ -1,4 +1,6 @@
-FROM resin/rpi-debian:stretch
+FROM FROM resin/intel-nuc-debian:stretch
+# Enable systemd
+#ENV INITSYSTEM on
 MAINTAINER Sathya Laufer <sathya@homegear.email>
 
 RUN \
@@ -18,4 +20,4 @@ RUN \
 
 CMD /start.sh
 
-EXPOSE 2001 2002 2003
+EXPOSE 2001 2002 2003 9000-9010
