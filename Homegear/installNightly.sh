@@ -11,14 +11,14 @@ system="debian_stretch"
 arch="amd64"
 
 function downloadModule {
-	wget https://homegear.eu/downloads/nightlies/${1} || exit 12
+	wget https://homegear.eu/downloads/nightlies/${1} || exit 1212
 }
 
 function installModule {
 	dpkg -i ${1}
 	if [ $? -ne 0 ]; then
-		apt-get -y -f install || exit 10
-		dpkg -i ${1} || exit 11
+		apt-get -y -f install || exit 1210
+		dpkg -i ${1} || exit 1211
 	fi
 }
 
@@ -27,14 +27,14 @@ cd $TEMPDIR
 rm -f homegear*.deb
 rm -f libhomegear*.deb
 
-wget https://homegear.eu/downloads/nightlies/libhomegear-base_current_${system}_${arch}.deb || exit 100
-wget https://homegear.eu/downloads/nightlies/libhomegear-node_current_${system}_${arch}.deb || exit 101
-wget https://homegear.eu/downloads/nightlies/libhomegear-ipc_current_${system}_${arch}.deb || exit 102
-wget https://homegear.eu/downloads/nightlies/homegear_current_${system}_${arch}.deb || exit 103
-wget https://homegear.eu/downloads/nightlies/homegear-nodes-core_current_${system}_${arch}.deb || exit 104
-wget https://homegear.eu/downloads/nightlies/homegear-nodes-extra_current_${system}_${arch}.deb || exit 105
-wget https://homegear.eu/downloads/nightlies/homegear-licensing_current_${system}_${arch}.deb || exit 106
-wget https://homegear.eu/downloads/nightlies/homegear-easy-licensing_current_${system}_${arch}.deb || exit 107
+wget https://homegear.eu/downloads/nightlies/libhomegear-base_current_${system}_${arch}.deb || exit 1100
+wget https://homegear.eu/downloads/nightlies/libhomegear-node_current_${system}_${arch}.deb || exit 1101
+wget https://homegear.eu/downloads/nightlies/libhomegear-ipc_current_${system}_${arch}.deb || exit 1102
+wget https://homegear.eu/downloads/nightlies/homegear_current_${system}_${arch}.deb || exit 1103
+wget https://homegear.eu/downloads/nightlies/homegear-nodes-core_current_${system}_${arch}.deb || exit 1104
+wget https://homegear.eu/downloads/nightlies/homegear-nodes-extra_current_${system}_${arch}.deb || exit 1105
+wget https://homegear.eu/downloads/nightlies/homegear-licensing_current_${system}_${arch}.deb || exit 1106
+wget https://homegear.eu/downloads/nightlies/homegear-easy-licensing_current_${system}_${arch}.deb || exit 1107
 
 downloadModule homegear-homematicbidcos_current_${system}_${arch}.deb
 downloadModule homegear-homematicwired_current_${system}_${arch}.deb
