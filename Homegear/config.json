@@ -1,7 +1,7 @@
 {
   "name": "Homegear",
   "version": "0.8.0-0001-nightly",
-  "slug": "rpi-homegear",
+  "slug": "nuc-homegear",
   "description": "Homegear as a Hassio add-on",
   "startup": "before",
   "boot": "auto",
@@ -14,8 +14,7 @@
   "ports": {
     "2001/tcp": 2001,
     "2002/tcp": 2002,
-    "2003/tcp": 2003,
-    "9000-9010/tcp": 9000-9010
+    "2003/tcp": 2003
   },
   "environment": {
   },
