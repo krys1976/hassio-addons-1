@@ -9,7 +9,8 @@ RUN \
 COPY *.sh /
 
 RUN \
-   chmod +x /installNightly.sh && /installNightly.sh 
+   chmod +x /installNightly.sh 
+RUN /installNightly.sh 
 RUN \
    rm -f /etc/homegear/dh1024.pem /etc/homegear/homegear.crt /etc/homegear/homegear.key \
 && cp -R /etc/homegear /etc/homegear.config \
