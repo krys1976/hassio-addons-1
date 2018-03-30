@@ -1,4 +1,4 @@
-FROM resin/amd64-debian:stretch
+FROM resin/intel-nuc-debian:stretch
 MAINTAINER Sathya Laufer <sathya@homegear.email>
 
 RUN \
