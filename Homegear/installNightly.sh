@@ -6,7 +6,7 @@ fi
 
 SCRIPTDIR="$( cd "$(dirname $0)" && pwd )"
 
-apt-get update
+apt-get update && apt-get upgrade
 system="debian_stretch"
 arch="amd64"
 
