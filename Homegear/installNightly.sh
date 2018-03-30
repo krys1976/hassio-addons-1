@@ -11,14 +11,14 @@ system="debian_stretch"
 arch="amd64"
 
 function downloadModule {
-	wget https://homegear.eu/downloads/nightlies/${1} || exit 128
+	wget https://homegear.eu/downloads/nightlies/${1} || exit 12
 }
 
 function installModule {
 	dpkg -i ${1}
 	if [ $? -ne 0 ]; then
-		apt-get -y -f install || exit 16
-		dpkg -i ${1} || exit 1
+		apt-get -y -f install || exit 10
+		dpkg -i ${1} || exit 11
 	fi
 }
 
@@ -27,14 +27,14 @@ cd $TEMPDIR
 rm -f homegear*.deb
 rm -f libhomegear*.deb
 
-wget https://homegear.eu/downloads/nightlies/libhomegear-base_current_${system}_${arch}.deb || exit 1
-wget https://homegear.eu/downloads/nightlies/libhomegear-node_current_${system}_${arch}.deb || exit 1
-wget https://homegear.eu/downloads/nightlies/libhomegear-ipc_current_${system}_${arch}.deb || exit 1
-wget https://homegear.eu/downloads/nightlies/homegear_current_${system}_${arch}.deb || exit 1
-wget https://homegear.eu/downloads/nightlies/homegear-nodes-core_current_${system}_${arch}.deb || exit 1
-wget https://homegear.eu/downloads/nightlies/homegear-nodes-extra_current_${system}_${arch}.deb || exit 1
-wget https://homegear.eu/downloads/nightlies/homegear-licensing_current_${system}_${arch}.deb || exit 1
-wget https://homegear.eu/downloads/nightlies/homegear-easy-licensing_current_${system}_${arch}.deb || exit 1
+wget https://homegear.eu/downloads/nightlies/libhomegear-base_current_${system}_${arch}.deb || exit 100
+wget https://homegear.eu/downloads/nightlies/libhomegear-node_current_${system}_${arch}.deb || exit 101
+wget https://homegear.eu/downloads/nightlies/libhomegear-ipc_current_${system}_${arch}.deb || exit 102
+wget https://homegear.eu/downloads/nightlies/homegear_current_${system}_${arch}.deb || exit 103
+wget https://homegear.eu/downloads/nightlies/homegear-nodes-core_current_${system}_${arch}.deb || exit 104
+wget https://homegear.eu/downloads/nightlies/homegear-nodes-extra_current_${system}_${arch}.deb || exit 105
+wget https://homegear.eu/downloads/nightlies/homegear-licensing_current_${system}_${arch}.deb || exit 106
+wget https://homegear.eu/downloads/nightlies/homegear-easy-licensing_current_${system}_${arch}.deb || exit 107
 
 downloadModule homegear-homematicbidcos_current_${system}_${arch}.deb
 downloadModule homegear-homematicwired_current_${system}_${arch}.deb
@@ -60,54 +60,54 @@ downloadModule homegear-ccu2_current_${system}_${arch}.deb
 
 dpkg -i libhomegear-base_current_${system}_${arch}.deb
 if [ $? -ne 0 ]; then
-	apt-get -y -f install || exit 1
-	dpkg -i libhomegear-base_current_${system}_${arch}.deb || exit 1
+	apt-get -y -f install || exit 1000
+	dpkg -i libhomegear-base_current_${system}_${arch}.deb || exit 1001
 fi
 
 dpkg -i libhomegear-node_current_${system}_${arch}.deb
 if [ $? -ne 0 ]; then
-	apt-get -y -f install || exit 1
-	dpkg -i libhomegear-node_current_${system}_${arch}.deb || exit 1
+	apt-get -y -f install || exit 1002
+	dpkg -i libhomegear-node_current_${system}_${arch}.deb || exit 1003
 fi
 
 dpkg -i libhomegear-ipc_current_${system}_${arch}.deb
 if [ $? -ne 0 ]; then
-	apt-get -y -f install || exit 1
-	dpkg -i libhomegear-ipc_current_${system}_${arch}.deb || exit 1
+	apt-get -y -f install || exit 1004
+	dpkg -i libhomegear-ipc_current_${system}_${arch}.deb || exit 1005
 fi
 
 dpkg -i homegear_current_${system}_${arch}.deb
 if [ $? -ne 0 ]; then
-	apt-get -y -f install || exit 1
+	apt-get -y -f install || exit 1006
 	dpkg -i homegear_current_${system}_${arch}.deb
 	if [ $? -ne 0 ]; then
-		apt-get -y -f install || exit 1
-		dpkg -i homegear_current_${system}_${arch}.deb || exit 1
+		apt-get -y -f install || exit 1007
+		dpkg -i homegear_current_${system}_${arch}.deb || exit 1008
 	fi
 fi
 
 dpkg -i homegear-nodes-core_current_${system}_${arch}.deb
 if [ $? -ne 0 ]; then
-	apt-get -y -f install || exit 1
-	dpkg -i homegear-nodes-core_current_${system}_${arch}.deb || exit 1
+	apt-get -y -f install || exit 1009
+	dpkg -i homegear-nodes-core_current_${system}_${arch}.deb || exit 1010
 fi
 
 dpkg -i homegear-nodes-extra_current_${system}_${arch}.deb
 if [ $? -ne 0 ]; then
-	apt-get -y -f install || exit 1
-	dpkg -i homegear-nodes-extra_current_${system}_${arch}.deb || exit 1
+	apt-get -y -f install || exit 1011
+	dpkg -i homegear-nodes-extra_current_${system}_${arch}.deb || exit 1012
 fi
 
 dpkg -i homegear-licensing_current_${system}_${arch}.deb
 if [ $? -ne 0 ]; then
-	apt-get -y -f install || exit 1
-	dpkg -i homegear-licensing_current_${system}_${arch}.deb || exit 1
+	apt-get -y -f install || exit 1013
+	dpkg -i homegear-licensing_current_${system}_${arch}.deb || exit 1014
 fi
 
 dpkg -i homegear-easy-licensing_current_${system}_${arch}.deb
 if [ $? -ne 0 ]; then
-	apt-get -y -f install || exit 1
-	dpkg -i homegear-easy-licensing_current_${system}_${arch}.deb || exit 1
+	apt-get -y -f install || exit 1015
+	dpkg -i homegear-easy-licensing_current_${system}_${arch}.deb || exit 1016
 fi
 
 installModule homegear-homematicbidcos_current_${system}_${arch}.deb
