@@ -1,4 +1,5 @@
-FROM resin/intel-nuc-debian:stretch
+ARG BUILD_FROM
+FROM $BUILD_FROM
 MAINTAINER Sathya Laufer <sathya@homegear.email>
 
 RUN \
