@@ -1,4 +1,4 @@
-FROM debian:stretch
+FROM resin/amd64-debian:stretch
 MAINTAINER Sathya Laufer <sathya@homegear.email>
 
 RUN \
