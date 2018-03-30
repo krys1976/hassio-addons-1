@@ -1,4 +1,17 @@
-FROM FROM resin/intel-nuc-debian:stretch
+FROM resin/amd64-debian:stretch
+
+LABEL io.resin.device-type="intel-nuc"
+
+RUN apt-get update && apt-get install -y --no-install-recommends \
+		less \
+		kmod \
+		nano \
+		net-tools \
+		ifupdown \	
+		iputils-ping \	
+		i2c-tools \
+		usbutils \	
+&& rm -rf /var/lib/apt/lists/*
 # Enable systemd
 #ENV INITSYSTEM on
 MAINTAINER Sathya Laufer <sathya@homegear.email>
