@@ -9,8 +9,9 @@ RUN \
 COPY *.sh /
 
 RUN \
-   chmod +x /installNightly.sh && /installNightly.sh \
-&& rm -f /etc/homegear/dh1024.pem /etc/homegear/homegear.crt /etc/homegear/homegear.key \
+   chmod +x /installNightly.sh && /installNightly.sh 
+RUN \
+   rm -f /etc/homegear/dh1024.pem /etc/homegear/homegear.crt /etc/homegear/homegear.key \
 && cp -R /etc/homegear /etc/homegear.config \
 && cp -R /var/lib/homegear /var/lib/homegear.data \
 && apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* \
@@ -18,4 +19,4 @@ RUN \
 
 CMD /start.sh
 
-EXPOSE 2001 2002 2003 9000-9010
+EXPOSE 2001 2002 2003
