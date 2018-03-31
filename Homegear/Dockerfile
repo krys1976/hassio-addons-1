@@ -1,5 +1,6 @@
 ARG BUILD_FROM
 FROM $BUILD_FROM
+ENV INITSYSTEM on
 MAINTAINER Sathya Laufer <sathya@homegear.email>
 
 RUN \
