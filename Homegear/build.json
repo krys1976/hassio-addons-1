@@ -1,6 +1,6 @@
 {
   "build_from": {
     "armhf": "resin/rpi-raspbian:stretch",
-    "amd64": "library/debian:jessie"
+    "amd64": "resin/debian:stretch"
   }
 }
