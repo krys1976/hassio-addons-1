@@ -1,6 +1,6 @@
 {
   "build_from": {
     "armhf": "resin/rpi-raspbian:stretch",
-    "amd64": "resin/amd64-debian:stretch"
+    "amd64": "resin/intel-nuc-debian:stretch"
   }
 }
