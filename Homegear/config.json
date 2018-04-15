@@ -23,6 +23,5 @@
   "schema": {
   },
   "devices": [
-    "/dev/ttyACM0:/dev/ttyACM0:rwm"
   ]
 }
