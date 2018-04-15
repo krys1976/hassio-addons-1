@@ -4,11 +4,20 @@ FROM $BUILD_FROM
 MAINTAINER Sathya Laufer <sathya@homegear.email>
 
 RUN \
-   apt-get update && apt-get -y install apt-transport-https apt-utils wget ca-certificates gnupg \
+   apt-get update && apt-get -y install apt-transport-https apt-utils wget ca-certificates gnupg libusb-1.0-0-dev build-essential git \
 && wget https://homegear.eu/packages/Release.key && apt-key add Release.key && rm Release.key \
 && echo 'deb https://homegear.eu/packages/Debian/ stretch/' >> /etc/apt/sources.list.d/homegear.list
 
 COPY *.sh /
+
+RUN cd /root \
+   wget https://git.zerfleddert.de/hmcfgusb/releases/hmcfgusb-0.103.tar.gz \
+   cd /root/hmcfgusb-0.103 \
+   make \
+   cp hmland hmsniff flash-hmmoduart flash-ota flash-hmcfgusb /usr/sbin \
+   cp hmcfgusb.rules /etc/udev/rules.d/ \
+   cd /root \
+   rm hmcfgusb-0.103 -rf
 
 RUN \
    chmod +x /installNightly.sh 
