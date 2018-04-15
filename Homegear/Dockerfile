@@ -15,6 +15,7 @@ RUN cd /root \
    cd /root/hmcfgusb-0.103 \
    make \
    cp hmland hmsniff flash-hmmoduart flash-ota flash-hmcfgusb /usr/sbin \
+   mkdir -p /etc/udev/rules.d/
    cp hmcfgusb.rules /etc/udev/rules.d/ \
    cd /root \
    rm hmcfgusb-0.103 -rf
