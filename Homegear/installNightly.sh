@@ -134,7 +134,7 @@ installModule homegear-ccu2_${cversion}_${system}_${arch}.deb
 #installModule homegear-easycam_${cversion}_${system}_${arch}.deb
 #installModule homegear-easyled_${cversion}_${system}_${arch}.deb
 #installModule homegear-easyled2_${cversion}_${system}_${arch}.deb
-installModule homegear-management_${cversion}_${system}_${arch}.deb
+#installModule homegear-management_${cversion}_${system}_${arch}.deb
 #installModule homegear-influxdb_${cversion}_${system}_${arch}.deb
 
 rm -f /etc/homegear/dh1024.pem
@@ -145,10 +145,10 @@ cd $SCRIPTDIR
 rm -Rf $TEMPDIR
 rm -f /InstallNightly.sh
 
-service homegear stop
-sync
-sleep 10
+#service homegear stop
+#sync
+#sleep 10
 
-systemctl enable homegear-management
-systemctl enable homegear-influxdb
+#systemctl enable homegear-management
+#systemctl enable homegear-influxdb
 
