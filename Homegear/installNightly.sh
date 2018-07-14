@@ -11,7 +11,7 @@ system="debian_stretch"
 arch="amd64"
 
 # put date or current
-cversion="20180713"
+cversion="20180714"
 
 function downloadModule {
 	wget https://homegear.eu/downloads/nightlies/${1} || exit 1
@@ -55,10 +55,11 @@ downloadModule homegear-homematicbidcos_${cversion}_${system}_${arch}.deb
 #downloadModule homegear-rsl_${cversion}_${system}_${arch}.deb
 #downloadModule homegear-zwave_${cversion}_${system}_${arch}.deb
 #downloadModule homegear-mbus_${cversion}_${system}_${arch}.deb
-#downloadModule homegear-ccu2_${cversion}_${system}_${arch}.deb
+downloadModule homegear-ccu2_${cversion}_${system}_${arch}.deb
 #downloadModule homegear-easycam_${cversion}_${system}_${arch}.deb
 #downloadModule homegear-easyled_${cversion}_${system}_${arch}.deb
 #downloadModule homegear-easyled2_${cversion}_${system}_${arch}.deb
+downloadModule homegear-management_${cversion}_${system}_${arch}.deb
 #downloadModule homegear-influxdb_${cversion}_${system}_${arch}.deb
 
 dpkg -i libhomegear-base_${cversion}_${system}_${arch}.deb
@@ -129,10 +130,11 @@ installModule homegear-homematicbidcos_${cversion}_${system}_${arch}.deb
 #installModule homegear-rsl_${cversion}_${system}_${arch}.deb
 #installModule homegear-zwave_${cversion}_${system}_${arch}.deb
 #installModule homegear-mbus_${cversion}_${system}_${arch}.deb
-#installModule homegear-ccu2_${cversion}_${system}_${arch}.deb
+installModule homegear-ccu2_${cversion}_${system}_${arch}.deb
 #installModule homegear-easycam_${cversion}_${system}_${arch}.deb
 #installModule homegear-easyled_${cversion}_${system}_${arch}.deb
 #installModule homegear-easyled2_${cversion}_${system}_${arch}.deb
+installModule homegear-management_${cversion}_${system}_${arch}.deb
 #installModule homegear-influxdb_${cversion}_${system}_${arch}.deb
 
 rm -f /etc/homegear/dh1024.pem
@@ -142,3 +144,11 @@ rm -f /etc/homegear/homegear.crt
 cd $SCRIPTDIR
 rm -Rf $TEMPDIR
 rm -f /InstallNightly.sh
+
+service homegear stop
+sync
+sleep 10
+
+systemctl enable homegear-management
+systemctl enable homegear-influxdb
+
