@@ -1,6 +1,6 @@
 {
   "name": "Homegear",
-  "version": "0.8.0-2270.2-nightly",
+  "version": "0.8.0-2270.3-nightly",
   "slug": "homegear",
   "description": "Homegear as a Hassio add-on",
   "startup": "before",
