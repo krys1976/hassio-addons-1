@@ -38,6 +38,7 @@ wget https://homegear.eu/downloads/nightlies/homegear-nodes-core_${cversion}_${s
 wget https://homegear.eu/downloads/nightlies/homegear-nodes-extra_${cversion}_${system}_${arch}.deb || exit 1
 wget https://homegear.eu/downloads/nightlies/homegear-licensing_${cversion}_${system}_${arch}.deb || exit 1
 wget https://homegear.eu/downloads/nightlies/homegear-easy-licensing_${cversion}_${system}_${arch}.deb || exit 1
+wget https://homegear.eu/downloads/nightlies/homegear-management_${cversion}_${system}_${arch}.deb || exit 1
 
 downloadModule homegear-homematicbidcos_${cversion}_${system}_${arch}.deb
 #downloadModule homegear-homematicwired_${cversion}_${system}_${arch}.deb
@@ -59,7 +60,6 @@ downloadModule homegear-ccu2_${cversion}_${system}_${arch}.deb
 #downloadModule homegear-easycam_${cversion}_${system}_${arch}.deb
 #downloadModule homegear-easyled_${cversion}_${system}_${arch}.deb
 #downloadModule homegear-easyled2_${cversion}_${system}_${arch}.deb
-downloadModule homegear-management_${cversion}_${system}_${arch}.deb
 #downloadModule homegear-influxdb_${cversion}_${system}_${arch}.deb
 
 dpkg -i libhomegear-base_${cversion}_${system}_${arch}.deb
@@ -114,6 +114,12 @@ if [ $? -ne 0 ]; then
 	dpkg -i homegear-easy-licensing_${cversion}_${system}_${arch}.deb || exit 1
 fi
 
+dpkg -i homegear-management_${cversion}_${system}_${arch}.deb
+if [ $? -ne 0 ]; then
+	apt-get -y -f install || exit 1
+	dpkg -i homegear-management_${cversion}_${system}_${arch}.deb || exit 1
+fi
+
 installModule homegear-homematicbidcos_${cversion}_${system}_${arch}.deb
 #installModule homegear-homematicwired_${cversion}t_${system}_${arch}.deb
 #installModule homegear-insteon_${cversion}_${system}_${arch}.deb
@@ -134,7 +140,6 @@ installModule homegear-ccu2_${cversion}_${system}_${arch}.deb
 #installModule homegear-easycam_${cversion}_${system}_${arch}.deb
 #installModule homegear-easyled_${cversion}_${system}_${arch}.deb
 #installModule homegear-easyled2_${cversion}_${system}_${arch}.deb
-#installModule homegear-management_${cversion}_${system}_${arch}.deb
 #installModule homegear-influxdb_${cversion}_${system}_${arch}.deb
 
 rm -f /etc/homegear/dh1024.pem
