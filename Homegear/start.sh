@@ -34,7 +34,7 @@ if ! [ -f /etc/homegear/dh1024.pem ]; then
 	chmod 400 /etc/homegear/dh1024.pem
 fi
 
-/usr/bin/homegear-management -d -p /var/run/homegear/homegear-management.pid -u homegear -g homegear
+/usr/bin/homegear-management -d -p /var/run/homegear/homegear-management.pid
 /usr/bin/homegear -d -p /var/run/homegear/homegear.pid -u homegear -g homegear
 PID=$(cat /var/run/homegear/homegear.pid)
 
