@@ -116,7 +116,7 @@ fi
 
 dpkg -i homegear-management_${cversion}_${system}_${arch}.deb
 if [ $? -ne 0 ]; then
-	apt-get install insserv || exit 1
+	apt-get -y -f install insserv || exit 1
 	apt-get -y -f install || exit 1
 	dpkg -i homegear-management_${cversion}_${system}_${arch}.deb || exit 1
 fi
