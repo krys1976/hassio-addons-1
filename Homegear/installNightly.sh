@@ -56,7 +56,7 @@ downloadModule homegear-homematicbidcos_${cversion}_${system}_${arch}.deb
 #downloadModule homegear-rsl_${cversion}_${system}_${arch}.deb
 #downloadModule homegear-zwave_${cversion}_${system}_${arch}.deb
 #downloadModule homegear-mbus_${cversion}_${system}_${arch}.deb
-downloadModule homegear-ccu2_${cversion}_${system}_${arch}.deb
+#downloadModule homegear-ccu2_${cversion}_${system}_${arch}.deb
 #downloadModule homegear-easycam_${cversion}_${system}_${arch}.deb
 #downloadModule homegear-easyled_${cversion}_${system}_${arch}.deb
 #downloadModule homegear-easyled2_${cversion}_${system}_${arch}.deb
@@ -136,7 +136,7 @@ installModule homegear-homematicbidcos_${cversion}_${system}_${arch}.deb
 #installModule homegear-rsl_${cversion}_${system}_${arch}.deb
 #installModule homegear-zwave_${cversion}_${system}_${arch}.deb
 #installModule homegear-mbus_${cversion}_${system}_${arch}.deb
-installModule homegear-ccu2_${cversion}_${system}_${arch}.deb
+#installModule homegear-ccu2_${cversion}_${system}_${arch}.deb
 #installModule homegear-easycam_${cversion}_${system}_${arch}.deb
 #installModule homegear-easyled_${cversion}_${system}_${arch}.deb
 #installModule homegear-easyled2_${cversion}_${system}_${arch}.deb
