@@ -11,7 +11,7 @@ system="debian_stretch"
 arch="amd64"
 
 # put date or current
-cversion="20180922"
+cversion="20181004"
 
 function downloadModule {
 	wget https://homegear.eu/downloads/nightlies/${1} || exit 1
