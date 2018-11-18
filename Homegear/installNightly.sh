@@ -60,7 +60,7 @@ downloadModule homegear-homematicbidcos_${cversion}_${system}_${arch}.deb
 #downloadModule homegear-easycam_${cversion}_${system}_${arch}.deb
 #downloadModule homegear-easyled_${cversion}_${system}_${arch}.deb
 #downloadModule homegear-easyled2_${cversion}_${system}_${arch}.deb
-#downloadModule homegear-influxdb_${cversion}_${system}_${arch}.deb
+downloadModule homegear-influxdb_${cversion}_${system}_${arch}.deb
 
 dpkg -i libhomegear-base_${cversion}_${system}_${arch}.deb
 if [ $? -ne 0 ]; then
@@ -141,7 +141,7 @@ installModule homegear-homematicbidcos_${cversion}_${system}_${arch}.deb
 #installModule homegear-easycam_${cversion}_${system}_${arch}.deb
 #installModule homegear-easyled_${cversion}_${system}_${arch}.deb
 #installModule homegear-easyled2_${cversion}_${system}_${arch}.deb
-#installModule homegear-influxdb_${cversion}_${system}_${arch}.deb
+installModule homegear-influxdb_${cversion}_${system}_${arch}.deb
 
 rm -f /etc/homegear/dh1024.pem
 rm -f /etc/homegear/homegear.key
