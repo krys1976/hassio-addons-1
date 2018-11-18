@@ -1,8 +1,8 @@
 #!/bin/bash
-if [ "$(id -u)" != "0" ]; then
-	echo "This script must be run as root" 1>&2
-	exit 1
-fi
+#if [ "$(id -u)" != "0" ]; then
+#	echo "This script must be run as root" 1>&2
+#	exit 1
+#fi
 
 SCRIPTDIR="$( cd "$(dirname $0)" && pwd )"
 
@@ -11,7 +11,7 @@ system="debian_stretch"
 arch="amd64"
 
 # put date or current
-cversion="20181117"
+cversion="current"
 
 function downloadModule {
 	wget https://homegear.eu/downloads/nightlies/${1} || exit 1
