@@ -38,7 +38,6 @@ wget https://homegear.eu/downloads/nightlies/homegear-nodes-core_${cversion}_${s
 wget https://homegear.eu/downloads/nightlies/homegear-nodes-extra_${cversion}_${system}_${arch}.deb || exit 1
 wget https://homegear.eu/downloads/nightlies/homegear-licensing_${cversion}_${system}_${arch}.deb || exit 1
 wget https://homegear.eu/downloads/nightlies/homegear-easy-licensing_${cversion}_${system}_${arch}.deb || exit 1
-wget https://homegear.eu/downloads/nightlies/homegear-management_${cversion}_${system}_${arch}.deb || exit 1
 
 downloadModule homegear-homematicbidcos_${cversion}_${system}_${arch}.deb
 #downloadModule homegear-homematicwired_${cversion}_${system}_${arch}.deb
@@ -61,6 +60,9 @@ downloadModule homegear-homematicbidcos_${cversion}_${system}_${arch}.deb
 #downloadModule homegear-easyled_${cversion}_${system}_${arch}.deb
 #downloadModule homegear-easyled2_${cversion}_${system}_${arch}.deb
 downloadModule homegear-influxdb_${cversion}_${system}_${arch}.deb
+downloadModule homegear-management_current_${system}_${arch}.deb
+#downloadModule homegear-webssh_current_${system}_${arch}.deb
+downloadModule homegear-adminui_current_${system}_${arch}.deb
 
 dpkg -i libhomegear-base_${cversion}_${system}_${arch}.deb
 if [ $? -ne 0 ]; then
@@ -114,13 +116,6 @@ if [ $? -ne 0 ]; then
 	dpkg -i homegear-easy-licensing_${cversion}_${system}_${arch}.deb || exit 1
 fi
 
-dpkg -i homegear-management_${cversion}_${system}_${arch}.deb
-if [ $? -ne 0 ]; then
-	apt-get -y -f install insserv || exit 1
-	apt-get -y -f install || exit 1
-	dpkg -i homegear-management_${cversion}_${system}_${arch}.deb || exit 1
-fi
-
 installModule homegear-homematicbidcos_${cversion}_${system}_${arch}.deb
 #installModule homegear-homematicwired_${cversion}t_${system}_${arch}.deb
 #installModule homegear-insteon_${cversion}_${system}_${arch}.deb
@@ -142,6 +137,9 @@ installModule homegear-homematicbidcos_${cversion}_${system}_${arch}.deb
 #installModule homegear-easyled_${cversion}_${system}_${arch}.deb
 #installModule homegear-easyled2_${cversion}_${system}_${arch}.deb
 installModule homegear-influxdb_${cversion}_${system}_${arch}.deb
+installModule homegear-management_current_${system}_${arch}.deb
+#installModule homegear-webssh_current_${system}_${arch}.deb
+installModule homegear-adminui_current_${system}_${arch}.deb
 
 rm -f /etc/homegear/dh1024.pem
 rm -f /etc/homegear/homegear.key
@@ -150,11 +148,3 @@ rm -f /etc/homegear/homegear.crt
 cd $SCRIPTDIR
 rm -Rf $TEMPDIR
 rm -f /InstallNightly.sh
-
-#service homegear stop
-#sync
-#sleep 10
-
-#systemctl enable homegear-management
-#systemctl enable homegear-influxdb
-
