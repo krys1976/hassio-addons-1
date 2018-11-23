@@ -4,7 +4,7 @@ FROM $BUILD_FROM
 MAINTAINER Sathya Laufer <sathya@homegear.email>
 
 RUN \
-   apt-get update && apt-get -y install apt-transport-https apt-utils wget ca-certificates gnupg libzip4 libavahi-client3 libavahi-client-dev insserv libusb-1.0-0-dev build-essential git \
+   apt-get update && apt-get -y install apt-transport-https apt-utils wget ca-certificates gnupg libzip4 libavahi-client3 libavahi-client-dev insserv libusb-1.0-0-dev build-essential git gdb libc6-dbg libstdc++6-6-dbg \
 && wget https://homegear.eu/packages/Release.key && apt-key add Release.key && rm Release.key \
 && echo 'deb https://homegear.eu/packages/Debian/ stretch/' >> /etc/apt/sources.list.d/homegear.list
 
