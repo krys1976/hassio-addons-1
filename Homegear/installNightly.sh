@@ -145,6 +145,9 @@ rm -f /etc/homegear/dh1024.pem
 rm -f /etc/homegear/homegear.key
 rm -f /etc/homegear/homegear.crt
 
+wget https://github.com/hobbyquaker/homematic-manager/releases/download/2.2.1/homematic-manager_2.2.1_amd64.deb
+installModule homematic-manager_2.2.1_amd64.deb
+
 cd $SCRIPTDIR
 rm -Rf $TEMPDIR
 rm -f /InstallNightly.sh
